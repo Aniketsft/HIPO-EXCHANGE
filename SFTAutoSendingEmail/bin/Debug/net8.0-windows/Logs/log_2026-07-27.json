@@ -1,0 +1,14 @@
+[
+  {
+    "Timestamp": "2026-07-27T11:56:23.1698393\u002B04:00",
+    "Level": "INFO",
+    "Profile": "FolderMonitor",
+    "Message": "Started monitoring folder: D:\\OneDrive - SFT\\SFT\\SFTAutoSendingEmail\\bin\\Debug\\net8.0-windows\\Input"
+  },
+  {
+    "Timestamp": "2026-07-27T14:10:24.4695418\u002B04:00",
+    "Level": "INFO",
+    "Profile": "FolderMonitor",
+    "Message": "Started monitoring folder: D:\\OneDrive - SFT\\SFT\\SFTAutoSendingEmail\\bin\\Debug\\net8.0-windows\\Input"
+  }
+]

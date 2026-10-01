@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "INV",
+    "SmtpConfig": {
+      "Host": "smtp.example.com",
+      "Port": 587,
+      "Username": null,
+      "Password": null,
+      "UseSsl": false,
+      "FromAddress": null,
+      "FromName": null
+    },
+    "HtmlTemplate": "\u003Ch1\u003EInvoice Attached\u003C/h1\u003E",
+    "CC": "",
+    "BCC": "",
+    "StaticAttachmentPath": ""
+  }
+]
