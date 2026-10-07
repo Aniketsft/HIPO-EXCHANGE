@@ -1,0 +1,197 @@
+{
+  "D:\\HIPO_EXCHANGE\\App\\SFTAutoSendingEmail\\SFTAutoSendingEmail\\AutoEmailer.csproj": {
+    "mtime": 1790831300.1744983,
+    "ast_hash": "c05179d847e74a4f2eb4da560bd1ee82",
+    "semantic_hash": "c05179d847e74a4f2eb4da560bd1ee82"
+  },
+  "D:\\HIPO_EXCHANGE\\App\\SFTAutoSendingEmail\\SFTAutoSendingEmail\\EmailSender.cs": {
+    "mtime": 1790831300.2221653,
+    "ast_hash": "6bbf856c2a81fe2477f77f27c191aabb",
+    "semantic_hash": "6bbf856c2a81fe2477f77f27c191aabb"
+  },
+  "D:\\HIPO_EXCHANGE\\App\\SFTAutoSendingEmail\\SFTAutoSendingEmail\\FolderMonitor.cs": {
+    "mtime": 1790831300.2404015,
+    "ast_hash": "60d1b2ceb247baad4344b3408cacfb2b",
+    "semantic_hash": "60d1b2ceb247baad4344b3408cacfb2b"
+  },
+  "D:\\HIPO_EXCHANGE\\App\\SFTAutoSendingEmail\\SFTAutoSendingEmail\\Form1.cs": {
+    "mtime": 1790831300.2539546,
+    "ast_hash": "11013ef922549ca5723318db3f1eb6fc",
+    "semantic_hash": "11013ef922549ca5723318db3f1eb6fc"
+  },
+  "D:\\HIPO_EXCHANGE\\App\\SFTAutoSendingEmail\\SFTAutoSendingEmail\\HipodocLogger.cs": {
+    "mtime": 1790831300.2962437,
+    "ast_hash": "c6415636a4112f1c8caeb843851af568",
+    "semantic_hash": "c6415636a4112f1c8caeb843851af568"
+  },
+  "D:\\HIPO_EXCHANGE\\App\\SFTAutoSendingEmail\\SFTAutoSendingEmail\\HipodocWorker.cs": {
+    "mtime": 1790831300.3174195,
+    "ast_hash": "eb59cbf6f62dd31b4a36d61af4b5f748",
+    "semantic_hash": "eb59cbf6f62dd31b4a36d61af4b5f748"
+  },
+  "D:\\HIPO_EXCHANGE\\App\\SFTAutoSendingEmail\\SFTAutoSendingEmail\\LicenseManager.cs": {
+    "mtime": 1790831300.3491156,
+    "ast_hash": "48f9af6a22ca91df69d7b8e4971b84d5",
+    "semantic_hash": "48f9af6a22ca91df69d7b8e4971b84d5"
+  },
+  "D:\\HIPO_EXCHANGE\\App\\SFTAutoSendingEmail\\SFTAutoSendingEmail\\PdfProcessor.cs": {
+    "mtime": 1790831300.401134,
+    "ast_hash": "e90f0244987a4898481f96bc70eb36e8",
+    "semantic_hash": "e90f0244987a4898481f96bc70eb36e8"
+  },
+  "D:\\HIPO_EXCHANGE\\App\\SFTAutoSendingEmail\\SFTAutoSendingEmail\\ProfileManager.cs": {
+    "mtime": 1790831300.4149206,
+    "ast_hash": "7e9ea4cf439c1e7bb0eba2049bd12d61",
+    "semantic_hash": "7e9ea4cf439c1e7bb0eba2049bd12d61"
+  },
+  "D:\\HIPO_EXCHANGE\\App\\SFTAutoSendingEmail\\SFTAutoSendingEmail\\Program.cs": {
+    "mtime": 1790831300.4465811,
+    "ast_hash": "df31a6217a73694f4f3b52851fcb2314",
+    "semantic_hash": "df31a6217a73694f4f3b52851fcb2314"
+  },
+  "D:\\HIPO_EXCHANGE\\App\\SFTAutoSendingEmail\\SFTAutoSendingEmail\\QueueEngine.cs": {
+    "mtime": 1790831300.462248,
+    "ast_hash": "b2023c00a7e6822da9cb441b3e9224af",
+    "semantic_hash": "b2023c00a7e6822da9cb441b3e9224af"
+  },
+  "D:\\HIPO_EXCHANGE\\App\\SFTAutoSendingEmail\\SFTAutoSendingEmail\\RetryEngine.cs": {
+    "mtime": 1790831300.4780443,
+    "ast_hash": "bac6b66b84ada6072dee7ef1fd2456ca",
+    "semantic_hash": "bac6b66b84ada6072dee7ef1fd2456ca"
+  },
+  "D:\\HIPO_EXCHANGE\\App\\SFTAutoSendingEmail\\SFTAutoSendingEmail\\SystemStateManager.cs": {
+    "mtime": 1790831300.491823,
+    "ast_hash": "315bc807da6266adc928a64355287054",
+    "semantic_hash": "315bc807da6266adc928a64355287054"
+  },
+  "D:\\HIPO_EXCHANGE\\App\\SFTAutoSendingEmail\\SFTAutoSendingEmail\\TestMTextBox.cs": {
+    "mtime": 1790831300.491823,
+    "ast_hash": "dcca449799557181e4697f54c3f87d29",
+    "semantic_hash": "dcca449799557181e4697f54c3f87d29"
+  },
+  "D:\\HIPO_EXCHANGE\\App\\SFTAutoSendingEmail\\SFTAutoSendingEmail\\bin\\Debug\\net8.0-windows\\HipoExchange.deps.json": {
+    "mtime": 1790833127.3924992,
+    "ast_hash": "264f9f516d402ea39c9bc7eb76815d7b",
+    "semantic_hash": "264f9f516d402ea39c9bc7eb76815d7b"
+  },
+  "D:\\HIPO_EXCHANGE\\App\\SFTAutoSendingEmail\\SFTAutoSendingEmail\\bin\\Debug\\net8.0-windows\\HipoExchange.runtimeconfig.json": {
+    "mtime": 1790833127.4427447,
+    "ast_hash": "35bc322bd42045632a8cb4fce81a90d2",
+    "semantic_hash": "35bc322bd42045632a8cb4fce81a90d2"
+  },
+  "D:\\HIPO_EXCHANGE\\App\\SFTAutoSendingEmail\\SFTAutoSendingEmail\\bin\\Debug\\net8.0-windows\\Logs\\log_2026-07-27.json": {
+    "mtime": 1790831302.706494,
+    "ast_hash": "8e7b48f738b5213105c1b542bf9a8703",
+    "semantic_hash": "8e7b48f738b5213105c1b542bf9a8703"
+  },
+  "D:\\HIPO_EXCHANGE\\App\\SFTAutoSendingEmail\\SFTAutoSendingEmail\\bin\\Debug\\net8.0-windows\\Logs\\log_2026-10-01.json": {
+    "mtime": 1790834097.5162792,
+    "ast_hash": "c043add271911c7cf1eef29441c1172c",
+    "semantic_hash": "c043add271911c7cf1eef29441c1172c"
+  },
+  "D:\\HIPO_EXCHANGE\\App\\SFTAutoSendingEmail\\SFTAutoSendingEmail\\obj\\AutoEmailer.csproj.nuget.dgspec.json": {
+    "mtime": 1790833119.0252268,
+    "ast_hash": "077901d9cfb4892b97f06714eae778a3",
+    "semantic_hash": "077901d9cfb4892b97f06714eae778a3"
+  },
+  "D:\\HIPO_EXCHANGE\\App\\SFTAutoSendingEmail\\SFTAutoSendingEmail\\obj\\Debug\\net8.0-windows\\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs": {
+    "mtime": 1790831304.9005475,
+    "ast_hash": "9b225453b5a8008eefb62f6c5c66ce15",
+    "semantic_hash": "9b225453b5a8008eefb62f6c5c66ce15"
+  },
+  "D:\\HIPO_EXCHANGE\\App\\SFTAutoSendingEmail\\SFTAutoSendingEmail\\obj\\Debug\\net8.0-windows\\AutoEmailer.AssemblyInfo.cs": {
+    "mtime": 1790833120.0034578,
+    "ast_hash": "8d81f8b554db92597bbe85b6a92f693b",
+    "semantic_hash": "8d81f8b554db92597bbe85b6a92f693b"
+  },
+  "D:\\HIPO_EXCHANGE\\App\\SFTAutoSendingEmail\\SFTAutoSendingEmail\\obj\\Debug\\net8.0-windows\\AutoEmailer.GlobalUsings.g.cs": {
+    "mtime": 1790831305.1549258,
+    "ast_hash": "197595243b8c7777128c3ea17e98ffd3",
+    "semantic_hash": "197595243b8c7777128c3ea17e98ffd3"
+  },
+  "D:\\HIPO_EXCHANGE\\App\\SFTAutoSendingEmail\\SFTAutoSendingEmail\\obj\\Debug\\net8.0-windows\\AutoEmailer.sourcelink.json": {
+    "mtime": 1790833120.0817902,
+    "ast_hash": "c36d54c7de7d477cc716e90588e1bd27",
+    "semantic_hash": "c36d54c7de7d477cc716e90588e1bd27"
+  },
+  "D:\\HIPO_EXCHANGE\\App\\SFTAutoSendingEmail\\SFTAutoSendingEmail\\obj\\project.assets.json": {
+    "mtime": 1790833118.9801214,
+    "ast_hash": "ea4a79854a66480f75fc2b396dd3e9ef",
+    "semantic_hash": "ea4a79854a66480f75fc2b396dd3e9ef"
+  },
+  "D:\\HIPO_EXCHANGE\\App\\SFTAutoSendingEmail\\SFTAutoSendingEmail\\profiles.json": {
+    "mtime": 1790831300.4308832,
+    "ast_hash": "833a3f92179ed5721121139aff100952",
+    "semantic_hash": "833a3f92179ed5721121139aff100952"
+  },
+  "D:\\HIPO_EXCHANGE\\App\\SFTAutoSendingEmail\\SFTAutoSendingEmail\\merged.md": {
+    "mtime": 1790831300.3652334,
+    "ast_hash": "1924d4f53f869e2ded1d100f2f82c5fb",
+    "semantic_hash": "1924d4f53f869e2ded1d100f2f82c5fb"
+  },
+  "D:\\HIPO_EXCHANGE\\App\\SFTAutoSendingEmail\\SFTAutoSendingEmail\\metadata_specification.md": {
+    "mtime": 1790831300.3853464,
+    "ast_hash": "5f2a59af44a24c394624259ae833e78a",
+    "semantic_hash": "5f2a59af44a24c394624259ae833e78a"
+  },
+  "D:\\HIPO_EXCHANGE\\App\\SFTAutoSendingEmail\\SFTAutoSendingEmail\\obj\\Debug\\net8.0-windows\\AutoEmailer.csproj.FileListAbsolute.txt": {
+    "mtime": 1790833127.5159628,
+    "ast_hash": "f7463ae2dbb31e5402cbb5239ab1d9da",
+    "semantic_hash": "f7463ae2dbb31e5402cbb5239ab1d9da"
+  },
+  "D:\\HIPO_EXCHANGE\\App\\SFTAutoSendingEmail\\SFTAutoSendingEmail\\bin\\Debug\\net8.0-windows\\Failed\\INV-1_e3967a55.pdf": {
+    "mtime": 1790834094.9987588,
+    "ast_hash": "16e273e9403da500116ff9dd9fb54914",
+    "semantic_hash": "16e273e9403da500116ff9dd9fb54914"
+  },
+  "D:\\HIPO_EXCHANGE\\App\\SFTAutoSendingEmail\\SFTAutoSendingEmail\\bin\\Debug\\net8.0-windows\\Failed\\INV-2024-991_6b24b61d.pdf": {
+    "mtime": 1790834095.3080585,
+    "ast_hash": "4798f43396c9753eb626939ecdc7e2d7",
+    "semantic_hash": "4798f43396c9753eb626939ecdc7e2d7"
+  },
+  "D:\\HIPO_EXCHANGE\\App\\SFTAutoSendingEmail\\SFTAutoSendingEmail\\bin\\Debug\\net8.0-windows\\Failed\\INV-2_57a4245a.pdf": {
+    "mtime": 1790834095.1677523,
+    "ast_hash": "5838f7b7aface2f908b8683f56e8020c",
+    "semantic_hash": "5838f7b7aface2f908b8683f56e8020c"
+  },
+  "D:\\HIPO_EXCHANGE\\App\\SFTAutoSendingEmail\\SFTAutoSendingEmail\\bin\\Debug\\net8.0-windows\\Failed\\SLIP-2024-10_e63b2b36.pdf": {
+    "mtime": 1790834095.453974,
+    "ast_hash": "c69138f89ccb36e13c71be4455dd7e80",
+    "semantic_hash": "c69138f89ccb36e13c71be4455dd7e80"
+  },
+  "D:\\HIPO_EXCHANGE\\App\\SFTAutoSendingEmail\\SFTAutoSendingEmail\\bin\\Debug\\net8.0-windows\\Processed_Batches\\CUST-883-BatchStatement.pdf": {
+    "mtime": 1790756993.6010127,
+    "ast_hash": "f517b86136f9994e5780af1a302f6dc6",
+    "semantic_hash": "f517b86136f9994e5780af1a302f6dc6"
+  },
+  "D:\\HIPO_EXCHANGE\\App\\SFTAutoSendingEmail\\SFTAutoSendingEmail\\bin\\Debug\\net8.0-windows\\Processed_Batches\\INV-1.pdf": {
+    "mtime": 1790756993.6010127,
+    "ast_hash": "04c332fa70b40d5b6526271eabf2b323",
+    "semantic_hash": "04c332fa70b40d5b6526271eabf2b323"
+  },
+  "D:\\HIPO_EXCHANGE\\App\\SFTAutoSendingEmail\\SFTAutoSendingEmail\\bin\\Debug\\net8.0-windows\\Processed_Batches\\INV-2.pdf": {
+    "mtime": 1790756993.6488311,
+    "ast_hash": "175c50f32e4bb969f2884290cd5e0d34",
+    "semantic_hash": "175c50f32e4bb969f2884290cd5e0d34"
+  },
+  "D:\\HIPO_EXCHANGE\\App\\SFTAutoSendingEmail\\SFTAutoSendingEmail\\bin\\Debug\\net8.0-windows\\Processed_Batches\\INV-2024-991.pdf": {
+    "mtime": 1790756993.6010127,
+    "ast_hash": "049e9e4143cea7577c019fc15b2f66e7",
+    "semantic_hash": "049e9e4143cea7577c019fc15b2f66e7"
+  },
+  "D:\\HIPO_EXCHANGE\\App\\SFTAutoSendingEmail\\SFTAutoSendingEmail\\bin\\Debug\\net8.0-windows\\Processed_Batches\\PO-44219.pdf": {
+    "mtime": 1790756993.6897604,
+    "ast_hash": "cd615c53744457c4285d8fe02872612a",
+    "semantic_hash": "cd615c53744457c4285d8fe02872612a"
+  },
+  "D:\\HIPO_EXCHANGE\\App\\SFTAutoSendingEmail\\SFTAutoSendingEmail\\bin\\Debug\\net8.0-windows\\Processed_Batches\\Payslip-JaneSmith.pdf": {
+    "mtime": 1790756993.6844556,
+    "ast_hash": "38e22c782ff770dd54c2c531863b5833",
+    "semantic_hash": "38e22c782ff770dd54c2c531863b5833"
+  },
+  "D:\\HIPO_EXCHANGE\\App\\SFTAutoSendingEmail\\SFTAutoSendingEmail\\bin\\Debug\\net8.0-windows\\Processed_Batches\\SOA-AcmeCorp.pdf": {
+    "mtime": 1790756993.6789944,
+    "ast_hash": "9639b95fbaafee48802efc11cdecbf4d",
+    "semantic_hash": "9639b95fbaafee48802efc11cdecbf4d"
+  }
+}

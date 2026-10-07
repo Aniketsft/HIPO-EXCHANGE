@@ -1,0 +1,108 @@
+﻿
+
+HipoExchange: Developer Guide & Crystal Reports Formulas
+1. Core Syntax
+HipoExchange uses a lightning-fast regex engine to parse Crystal Reports metadata directly from the generated PDF. The metadata is defined by a @@HIPO@@ block.
+Format:
+@@HIPO@@|TYPE:[ProfileID]|EMAIL:[Recipient]|PASSWORD:[Optional]|VAR1:[Value1]|VAR2:[Value2]@@ENDHIPO@@
+
+2. Required System Tags
+
+3. Optional System Tags
+
+4. Dynamic Variables (Custom Tags)
+Any additional tags you append (e.g., INVOICE_NO:, BALANCE:, BUYER:) will be parsed as dynamic variables. In your HipoExchange HTML templates, you can inject these variables using curly braces (e.g., Hello, your balance is {BALANCE}).
+
+5. Multi-Grouping (Batching Multiple Invoices for One Customer)
+HipoExchange has an extremely powerful built-in grouping engine. You have two different ways to bundle multiple documents for the same customer, depending on how they want to receive them.
+Option A: One Email with ONE massive PDF (All invoices merged)
+If a customer has 10 invoices, and you want to send them 1 email with 1 giant PDF attachment containing all 10 invoices.
+How to do it: Use the GROUP: tag in your Crystal Report instead of (or in addition to) FILENAME:. Ensure every page for that customer has the exact same GROUP: value.
+Example String: @@HIPO@@|TYPE:INV|EMAIL:finance@client.com|GROUP:CUST-883@@ENDHIPO@@
+Result: HipoExchange will see that the GROUP hasn't changed across all 10 invoices. It will stitch all the pages together into one massive PDF and send it in 1 email.
+Option B: One Email with MULTIPLE separate PDF attachments
+If a customer has 10 invoices, and you want to send them 1 email, but you want it to have 10 separate PDF attachments (e.g., INV-1.pdf, INV-2.pdf, etc.).
+How to do it: Give each invoice a unique FILENAME: tag, but use the exact same EMAIL: address.
+Example String Invoice 1: @@HIPO@@|TYPE:INV|EMAIL:finance@client.com|FILENAME:INV-1@@ENDHIPO@@
+Example String Invoice 2: @@HIPO@@|TYPE:INV|EMAIL:finance@client.com|FILENAME:INV-2@@ENDHIPO@@
+Result: HipoExchange will split them into two physical files (INV-1.pdf and INV-2.pdf). Both files will enter the dispatch queue at the same time. The master daemon will detect that both PDFs are going to the same email address, and it will intelligently group them into 1 single email containing both PDFs as separate attachments!
+
+6. Scenario Examples
+A. Invoices (INV)
+Scenario: Sending a standard invoice. It requires no password, but uses dynamic variables to populate the email body. Crystal Report String:
+@@HIPO@@|TYPE:INV|EMAIL:billing@customer.com|INVOICE_NO:INV-2024-991|TOTAL:$4,500.00|DUE_DATE:Oct 31, 2024@@ENDHIPO@@
+HipoExchange HTML Template Example:
+<h2>New Invoice Available</h2>
+<p>Your invoice <strong>{INVOICE_NO}</strong> for the amount of <strong>{TOTAL}</strong> is attached.</p>
+<p>Please ensure payment is made by {DUE_DATE}.</p>
+B. Statement of Account (SOA)
+Scenario: Sending a sensitive financial statement. The PDF must be password protected using a customer-specific code (e.g., their Customer ID or Tax ID). Crystal Report String:
+@@HIPO@@|TYPE:SOA|EMAIL:accounts@partner.com|PASSWORD:CUST-8832|CUSTOMER_NAME:Acme Corp|BALANCE:$12,450.00@@ENDHIPO@@
+HipoExchange HTML Template Example:
+<h2>Monthly Statement of Account</h2>
+<p>Dear {CUSTOMER_NAME},</p>
+<p>Your current outstanding balance is <strong>{BALANCE}</strong>. A detailed statement is attached to this email.</p>
+<p><em>Note: The attached PDF is encrypted. The password is your Customer ID.</em></p>
+C. Purchase Orders (PO)
+Scenario: Automatically dispatching Purchase Orders to vendors. Crystal Report String:
+@@HIPO@@|TYPE:PO|EMAIL:orders@supplier.com|PO_NUM:PO-44219|BUYER_NAME:John Doe|URGENCY:High@@ENDHIPO@@
+HipoExchange HTML Template Example:
+<h2>Purchase Order: {PO_NUM}</h2>
+<p>Please find our latest purchase order attached.</p>
+<p>Buyer: {BUYER_NAME}</p>
+<p>Urgency: <strong>{URGENCY}</strong></p>
+D. Employee Payslips (PAY)
+Scenario: Delivering highly sensitive payroll documents to employees. Must be strictly encrypted, often using the employee's Date of Birth (e.g., YYYYMMDD). Crystal Report String:
+@@HIPO@@|TYPE:PAY|EMAIL:j.smith@company.com|PASSWORD:19900101|EMP_NAME:Jane Smith|PERIOD:October 2024@@ENDHIPO@@
+HipoExchange HTML Template Example:
+<h2>Payslip - {PERIOD}</h2>
+<p>Hi {EMP_NAME},</p>
+<p>Your payslip for {PERIOD} is attached. Please use your date of birth (YYYYMMDD) to unlock the document.</p>
+
+7. Crystal Reports: Formula Guide & Scenarios
+All formulas should be placed in a Formula Field and dropped onto Page 1 (or every page) of the relevant report section, formatted with White Text (#FFFFFF) at 1pt Size.
+Scenario 1: The Standard Dispatch (1 Invoice = 1 Email)
+Crystal Syntax:
+"@@HIPO@@|TYPE:INV|EMAIL:" + {Customer.EmailAddress} + "|FILENAME:" + {Invoice.InvoiceNo} + "@@ENDHIPO@@"
+Scenario 2: Multi-Grouping Option A (Stitched / Merged PDF)
+Crystal Syntax:
+"@@HIPO@@|TYPE:SOA|EMAIL:" + {Customer.EmailAddress} + "|GROUP:" + {Customer.CustomerID} + "@@ENDHIPO@@"
+Scenario 3: Multi-Grouping Option B (Separate PDF Attachments)
+Crystal Syntax:
+"@@HIPO@@|TYPE:INV|EMAIL:" + {Customer.EmailAddress} + "|FILENAME:" + {Invoice.InvoiceNo} + "@@ENDHIPO@@"
+Scenario 4: Encrypted High-Security Documents
+Crystal Syntax:
+"@@HIPO@@|TYPE:PAY|EMAIL:" + {Employee.EmailAddress} + "|FILENAME:" + {Payroll.SlipID} + "|PASSWORD:" + ToText({Employee.DateOfBirth}, "yyyyMMdd") + "@@ENDHIPO@@"
+Scenario 5: Dynamic Mail Merge (Custom Email Bodies)
+Crystal Syntax:
+"@@HIPO@@|TYPE:INV|EMAIL:" + {Customer.EmailAddress} + "|FILENAME:" + {Invoice.InvoiceNo} + "|FIRST_NAME:" + {Customer.FirstName} + "|BALANCE:" + ToText({Invoice.TotalAmount}) + "@@ENDHIPO@@"
+
+8. Best Practices for Sage X3 Developers
+Color & Size: Place this formula field at the very top or bottom of the report footer/header. Set the font color to White (#FFFFFF) and the font size to 1pt so it is invisible to the human eye but easily parsable by HipoExchange.
+Page Grouping: When generating a massive batch PDF (e.g., 500 invoices in one file), ensure the @@HIPO@@ tag appears on Page 1 of every individual invoice. HipoExchange splits the batch whenever it detects a new @@HIPO@@ tag.
+No Line Breaks: Ensure the Crystal Reports formula does not inject accidental line breaks or carriage returns inside the @@HIPO@@...@@ENDHIPO@@ string.
+Delimiter Safety: Do not use the pipe | character in your dynamic variable values, as it is the system delimiter.
+
+9. Step-by-Step Implementation Guide for Crystal Reports
+Follow these exact steps to successfully integrate a new Crystal Report with HipoExchange.
+Step 1: Create a Formula Field
+Open your Crystal Report design file.
+In the Field Explorer on the right, right-click on Formula Fields and select New.
+Name it HipoExchangeMeta 
+Step 2: Write the HIPO Syntax
+In the Formula Editor, write your syntax by concatenating the system tags with your database fields. Example for a basic Invoice:
+"@@HIPO@@|TYPE:INV|EMAIL:" + {Customer.EmailAddress} + "|FILENAME:" + {Invoice.InvoiceNo} + "@@ENDHIPO@@"
+Note: Make sure there are no accidental spaces or line breaks injected into the string.
+Step 3: Place the Formula on the Canvas
+Drag and drop the HipoExchangeMeta formula field onto the Page Header or Page Footer of your report.
+Crucial: It must be printed on every single page if you are batching multiple documents into a single PDF, so HipoExchange knows where one document ends and the next begins.
+Step 4: Make it Invisible
+Right-click the formula field on the canvas and select Format Field.
+Go to the Font tab.
+Change the Color to White (or match your background color).
+Change the Size to 1pt. This ensures the ugly metadata string is completely invisible to humans when printed, but the PDF processor engine can still read it perfectly.
+Step 5: Test the Output
+Generate a test batch of PDFs from Sage X3.
+Drop the generated PDF into the HipoExchange Input folder (or let Sage X3 drop it automatically).
+Open the HipoExchange dashboard to watch the engine parse the tags and dispatch the emails!
+
